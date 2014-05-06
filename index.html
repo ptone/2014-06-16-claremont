@@ -1,41 +1,23 @@
 ---
 layout: bootcamp
 root: .
-venue: Euphoric State University
-address: 123 College Street, Euphoria
+venue: Claremont Colleges
+address: 888 Columbia Ave, Claremont, CA 91711
 country: United-States
-humandate: Feb 17-18, 2020
+humandate: June 16-17, 2014
 humantime: 9:00 am - 4:30 pm
-startdate: 2020-06-17
-enddate: 2020-06-18
-latlng: 41.7901128,-87.6007318
+startdate: 2014-06-16
+enddate: 2014-06-17
+latlng: 34.102082,-117.711183
 registration: restricted
-instructor: ["Grace Hopper", "Alan Turing"]
-contact: admin@software-carpentry.org
+instructor: ["Preston Holmes", "Bill Mills"]
+contact: psn@kecksci.claremont.edu
 ---
 <!--
     Edit the values in the parameter block above to be appropriate for your bootcamp.
     Please use three-letter month names for the 'humandate' field.
 -->
 
-<!-- Remove the block below. -->
-<div align="center">
-  <p><strong><em>
-      This page is a template for bootcamp home pages.
-      <br/>
-      Please see
-      <a href="https://github.com/swcarpentry/bc">https://github.com/swcarpentry/bc</a>
-      for instructions on how to create
-      a repository for your bootcamp.
-  </em></strong></p>
-</div>
-
-<!--
-    This block includes the Eventbrite registration widget if 'eventbrite' has been set in the header.
--->
-{% if page.eventbrite %}
-<iframe src="http://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt" frameborder="0" width="100%" scrolling="auto"></iframe>
-{% endif %}
 
 <h2>General Information</h2>
 
@@ -55,6 +37,7 @@ contact: admin@software-carpentry.org
   <strong>Instructors:</strong>
   {{page.instructor | join: ', ' %}}
 </p>
+
 {% endif %}
 
 <!--
@@ -62,15 +45,18 @@ contact: admin@software-carpentry.org
     In particular, if it is only open to people from a particular institution,
     or if specialized prerequisite knowledge is required, please mention that.
 -->
+
 <p>
   <strong>Who:</strong>
-  The course is aimed at graduate students and other researchers.
+  The course is aimed at advanced undergraduates, graduate students, and other researchers.
 </p>
 
 <!--
     This block displays the address and links to a map showing directions.
 -->
+
 {% if page.latlng %}
+
 <p>
   <strong>Where:</strong>
   {{ page.address }}.
@@ -79,6 +65,7 @@ contact: admin@software-carpentry.org
   or
   <a href="http://maps.google.com/maps?q={{ page.latlng }}">Google Maps</a>.
 </p>
+
 {% endif %}
 
 <!--
